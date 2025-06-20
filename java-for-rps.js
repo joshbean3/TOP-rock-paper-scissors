@@ -28,26 +28,36 @@ function getHumanChoice() {
     return human;
 }
 
-
-let computerChoice = getComputerChoice();
-let humanChoice = getHumanChoice();
 let humanScore = 0;
 let computerScore = 0;
 
-console.log(computerChoice);
-console.log(humanChoice);
-playRound(computerChoice, humanChoice);
+playGame();
+
+function playGame() {
+    counter = 0
+    while (counter <= 4){
+        let computerChoice = getComputerChoice();
+        let humanChoice = getHumanChoice();
+
+        playRound(computerChoice, humanChoice);
+        counter +=1;
+        console.log(counter);
+    }
+    if (counter === 5){
+        console.log(`That was five rounds, game over. Final Score - Human: ${humanScore} vs Computer: ${computerScore}`);
+    }
+}
 
 function playRound(computerChoice, humanChoice) {
     // Compare computerChoice to HumanChoice using OR operators
     if (humanChoice === "rock"){
         if (computerChoice === "scissors"){
             humanScore += 1;
-            console.log("Human 1 wins!");
+            console.log(`Human wins! Their score is ${humanScore}`);
             return humanScore;
         } else if (computerChoice === "paper") {
             computerScore += 1;
-            console.log("computer 1 wins!");
+            console.log(`Computer wins! Their score is ${computerScore}`);
             return computerScore;
         }else if (computerChoice === "rock"){
             console.log("It is a tie! Play again")
@@ -55,11 +65,11 @@ function playRound(computerChoice, humanChoice) {
     } else if (humanChoice === "paper"){
         if (computerChoice === "rock"){
             humanScore += 1;
-            console.log("Human 1 wins!");
+            console.log(`Human wins! Their score is ${humanScore}`);
             return humanScore;
         } else if (computerChoice === "scissors") {
             computerScore += 1;
-            console.log("computer 1 wins!");
+            console.log(`Computer wins! Their score is ${computerScore}`);
             return computerScore;
         }else if (computerChoice === "paper"){
             console.log("It is a tie! Play again")
@@ -67,14 +77,17 @@ function playRound(computerChoice, humanChoice) {
     } else if (humanChoice === "scissors "){
         if (computerChoice === "paper"){
             humanScore += 1;
+            console.log(`Human wins! Their score is ${humanScore}`);
             return humanScore;
-            console.log("Human 1 wins!");
         } else if (computerChoice === "rock") {
             computerScore += 1;
+            console.log(`Computer wins! Their score is ${computerScore}`);
             return computerScore;
-            console.log("computer 1 wins!");
+            
         }else if (computerChoice === "scissors"){
             console.log("It is a tie! Play again")
         }
     }
 }
+
+
