@@ -43,9 +43,9 @@ function playGame() {
         counter +=1;
         console.log(counter);
     }
-    if (counter === 5){
-        console.log(`That was five rounds, game over. Final Score - Human: ${humanScore} vs Computer: ${computerScore}`);
-    }
+    // if (counter === 5){
+    //     console.log(`That was five rounds, game over. Final Score - Human: ${humanScore} vs Computer: ${computerScore}`);
+    // }
 }
 
 function playRound(computerChoice, humanChoice) {
@@ -74,7 +74,7 @@ function playRound(computerChoice, humanChoice) {
         }else if (computerChoice === "paper"){
             console.log("It is a tie! Play again")
         }
-    } else if (humanChoice === "scissors "){
+    } else if (humanChoice === "scissors"){
         if (computerChoice === "paper"){
             humanScore += 1;
             console.log(`Human wins! Their score is ${humanScore}`);
@@ -90,4 +90,19 @@ function playRound(computerChoice, humanChoice) {
     }
 }
 
+
+const rockBtn = document.querySelector("#rock");
+rockBtn.addEventListener('click', playRound(computerChoice, "rock") {
+
+})
+
+const paperBtn = document.querySelector("#paper");
+rockBtn.addEventListener('click', playRound(computerChoice, "paper") {
+
+})
+
+const scissorsBtn = document.querySelector("#scissors");
+rockBtn.addEventListener('click', playRound(computerChoice, "scissors") {
+
+})
 
