@@ -91,18 +91,18 @@ function playRound(computerChoice, humanChoice) {
 }
 
 
-const rockBtn = document.querySelector("#rock");
-rockBtn.addEventListener('click', playRound(computerChoice, "rock") {
+// const rockBtn = document.querySelector("#rock");
+// rockBtn.addEventListener('click', playRound(computerChoice, "rock") {
 
-})
+// })
 
-const paperBtn = document.querySelector("#paper");
-rockBtn.addEventListener('click', playRound(computerChoice, "paper") {
+// const paperBtn = document.querySelector("#paper");
+// rockBtn.addEventListener('click', playRound(computerChoice, "paper") {
 
-})
+// })
 
-const scissorsBtn = document.querySelector("#scissors");
-rockBtn.addEventListener('click', playRound(computerChoice, "scissors") {
+// const scissorsBtn = document.querySelector("#scissors");
+// rockBtn.addEventListener('click', playRound(computerChoice, "scissors") {
 
-})
+// })
 
