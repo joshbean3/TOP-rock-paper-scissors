@@ -125,9 +125,9 @@ rockBtn.addEventListener('click', function() {
         alert("Game Over, Human Wins!");
     } else if (computerScore === 5) {
         humanScore = 0;
-        computerScore = 0;
+        computerScore = 0; 
         alert("Game Over, Computer Wins!");
-    }    
+    }
 })
 
 
@@ -137,13 +137,13 @@ paperBtn.addEventListener('click', function() {
     playRound(compChoice, "paper");
     if (humanScore === 5 ) {
         humanScore = 0;
-        computerScore = 0;
+        computerScore = 0;        
         alert("Game Over, Human Wins!");
     } else if (computerScore === 5) {
         humanScore = 0;
-        computerScore = 0;
+        computerScore = 0;  
         alert("Game Over, Computer Wins!");
-    }    
+    } 
 })
 
 
@@ -153,11 +153,12 @@ scissorsBtn.addEventListener('click', function() {
     playRound(compChoice, "scissors");
     if (humanScore === 5 ) {
         humanScore = 0;
-        computerScore = 0;
+        computerScore = 0;     
         alert("Game Over, Human Wins!");
     } else if (computerScore === 5) {
         humanScore = 0;
         computerScore = 0;
         alert("Game Over, Computer Wins!");
-    }    
+        
+    }
 })
